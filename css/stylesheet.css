@@ -1,0 +1,188 @@
+/* css general */
+*{margin: 0;padding: 0; list-style: none; text-decoration: none; box-sizing: border-box;}
+
+.gridContainer { 
+
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(7,auto);
+grid-template-areas: "header"
+                     "sectionInstalaciones"
+                     "sectionHorarios"
+                     "sectionInstructores"
+                     "sectionContacto"
+                     "footer"   ;
+row-gap: 50px;
+
+}
+
+.header__logo { 
+
+    max-width: 100px;
+    
+}
+
+.nav__li { 
+
+    padding: 5px;
+}
+a:link
+    {
+        color: rgb(15, 15, 15);
+        font-size: larger;
+    }
+
+a:visited
+    {
+        color: rgb(8, 8, 9)
+    }
+
+a:hover
+    {
+        color: rgb(86, 207, 140);
+        transition: 1s;
+        
+    }
+/* .articleInstalaciones__img,  .sectionContacto__iframe  { width: 80%;}  */
+
+
+/* vista mobile */
+@media  (max-width: 767px){
+
+.portada, .articleInstalaciones__img--disable , .articleInstructores__img--disable, .sectionContacto__iframe--disable, .sectionContacto__form--disable { 
+
+    display: none;
+}
+
+.articleInstalaciones__img, .articleInstructores__img { width: 80%;}
+
+.header { 
+
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #cadcda81;;
+
+}
+
+
+.articleInstalaciones ,.sectionInstalaciones, .sectionHorarios, .sectionInstructores, .articleInstructores__a, .sectionContacto, .footer  {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+
+
+}
+
+.sectionHorarios, .sectionContacto {
+     
+    background-color:#cadcda81;
+    padding: 10px;
+
+}
+
+.sectionContacto { 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sectionContacto__form , .sectionContacto__container1 { 
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+.sectionContacto__container3  { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #cadcda81;
+    padding: 10px;
+
+    
+}
+
+}
+
+    /* vista desktop */
+@media (min-width: 768px){
+
+    .header { 
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cadcda81;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    
+    }
+
+    .header__nav { 
+        width: 80%;
+    }
+
+    .nav__ul { 
+
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        width: 100%;
+    }
+    
+.portada__img { opacity: 0.8;}
+
+
+
+.sectionInstalaciones , .sectionHorarios, .sectionInstructores , .sectionContacto, h2 { 
+    text-align: center; padding-bottom: 50px;
+}
+.sectionInstalaciones , .sectionHorarios, .sectionInstructores , .sectionContacto{ padding-top: 100px; }
+    
+   .articleInstalaciones ,.articleInstructores  {
+    
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; 
+        justify-content: center;
+        background-color:#cadcda81;
+        padding: 30px;
+    
+    
+    }
+    
+    .sectionContacto--desktop { 
+
+    background-color: #cadcda81;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    
+     
+
+}
+
+    
+   
+    .sectionContacto__container2 , .sectionContacto__container1,   .sectionContacto__container3  { 
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 10%;
+        padding: 30px;
+}
+
+.footer { text-align: center;}    
+
+}
+
+

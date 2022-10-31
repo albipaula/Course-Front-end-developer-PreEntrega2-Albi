@@ -15,10 +15,9 @@ grid-template-areas: "header"
 row-gap: 50px;
 
 }
-
 .header__logo { 
 
-    max-width: 100px;
+    max-width: 35vh;
     
 }
 
@@ -34,36 +33,30 @@ a:link
 
 a:visited
     {
-        color: rgb(8, 8, 9)
+        color: rgb(28, 98, 27)
     }
 
 a:hover
     {
-        color: rgb(86, 207, 140);
-        transition: 1s;
-        
-    }
+        background-color: rgb(86, 207, 140);
+        padding: 20px;
+        border-radius: 10px;
+        width: fit-content;
+        transition: 1s;}
 /* .articleInstalaciones__img,  .sectionContacto__iframe  { width: 80%;}  */
-
 
 /* vista mobile */
 @media  (max-width: 767px){
 
-.portada, .articleInstalaciones__img--disable , .articleInstructores__img--disable, .sectionContacto__iframe--disable, .sectionContacto__form--disable { 
+.portada, .articleInstalaciones__img--disable , .articleInstructores__img--disable, .sectionContacto__iframe--disable, .sectionContacto__form--disable, .col__Instructor { 
 
     display: none;
 }
 
+.header, .sectionContacto__h2{ display: none;}
+
 .articleInstalaciones__img, .articleInstructores__img { width: 80%;}
 
-.header { 
-
-    display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background-color: #cadcda81;;
-
-}
 
 
 .articleInstalaciones ,.sectionInstalaciones, .sectionHorarios, .sectionInstructores, .articleInstructores__a, .sectionContacto, .footer  {
@@ -112,6 +105,9 @@ a:hover
     /* vista desktop */
 @media (min-width: 768px){
 
+
+.navbar{ display: none;}    
+
     .header { 
 
     display: flex;
@@ -143,46 +139,79 @@ a:hover
 .sectionInstalaciones , .sectionHorarios, .sectionInstructores , .sectionContacto, h2 { 
     text-align: center; padding-bottom: 50px;
 }
-.sectionInstalaciones , .sectionHorarios, .sectionInstructores , .sectionContacto{ padding-top: 100px; }
+.sectionInstalaciones , .sectionHorarios, .sectionInstructores , .sectionContacto{ padding-top: 300px; }
+
     
    .articleInstalaciones ,.articleInstructores  {
     
         display: flex;
         flex-wrap: wrap;
         align-items: center; 
-        justify-content: center;
+        justify-content: space-around;
         background-color:#cadcda81;
         padding: 30px;
     
     
     }
+
+    .articleInstalaciones__img , .articleInstalaciones__img--disable  {  border-radius: 20px; padding-top: 20px; }
     
-    .sectionContacto--desktop { 
+    .sectionContacto--desktop, .sectionContacto__container3--desktop { 
 
     background-color: #cadcda81;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
-    
-     
 
 }
 
+.sectionContacto__container2 {  
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 10%;
+    padding: 30px;
+}
     
    
-    .sectionContacto__container2 , .sectionContacto__container1,   .sectionContacto__container3  { 
+.sectionContacto__container1,   .sectionContacto__container3  { 
 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        width: 10%;
         padding: 30px;
 }
 
-.footer { text-align: center;}    
+.sectionContacto__container3--desktop  { 
 
+    display: flex;
+    flex-direction: row;
+    height: auto    ;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 50px;
+   
 }
 
+ .sectionContacto  { 
+
+
+  background-color: #cadcda81;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+
+} 
+
+.footer { text-align: center;}    
+
+
+
+
+}
 

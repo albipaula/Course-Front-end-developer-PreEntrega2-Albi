@@ -1,5 +1,12 @@
 /* css general */
-*{margin: 0;padding: 0; list-style: none; text-decoration: none; box-sizing: border-box;}
+*{
+    margin: 0;
+    padding: 0; 
+    list-style: none; 
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
 
 .gridContainer { 
 
@@ -13,51 +20,62 @@ grid-template-areas: "header"
                      "sectionContacto"
                      "footer"   ;
 row-gap: 50px;
+overflow-x:  hidden;
 
 }
 .header__logo { 
 
-    max-width: 35vh;
-    
+    max-width: 30vh;
 }
 
-.nav__li { 
+.navbar { 
 
-    padding: 5px;
+background-color:#cadcda81 !important ; 
+
 }
-a:link
-    {
-        color: rgb(15, 15, 15);
-        font-size: larger;
+
+
+a:link {
+
+    color: rgb(15, 15, 15);
+    font-size: larger;
     }
 
-a:visited
-    {
-        color: rgb(28, 98, 27)
-    }
+a:visited{
 
-a:hover
-    {
-        background-color: rgb(86, 207, 140);
-        padding: 20px;
-        border-radius: 10px;
-        width: fit-content;
-        transition: 1s;}
+    color: rgb(28, 98, 27)
+}
+
+a:hover{
+    background-color: rgb(86, 207, 140);
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    transition: 1s;
+}
+
+
+
+input, textarea{
+    margin: 0 auto; /* Centramos el formulario */
+    width: 300px;   /* Sin ancho no podemos centrar el formulario */
+    background-color: white; /* Color blanco para el formulario */
+    padding: 10px; /* separamos los bordes del form del resto de elementos */
+    border-radius: 10px; /* Redondeamos los bordes del form */
+    margin-top: 10px;
+ }
 /* .articleInstalaciones__img,  .sectionContacto__iframe  { width: 80%;}  */
 
 /* vista mobile */
 @media  (max-width: 767px){
 
 .portada, .articleInstalaciones__img--disable , .articleInstructores__img--disable, .sectionContacto__iframe--disable, .sectionContacto__form--disable, .col__Instructor { 
-
     display: none;
 }
 
-.header, .sectionContacto__h2{ display: none;}
+.sectionContacto__h2{ display: none;}
 
 .articleInstalaciones__img, .articleInstructores__img { width: 80%;}
-
-
 
 .articleInstalaciones ,.sectionInstalaciones, .sectionHorarios, .sectionInstructores, .articleInstructores__a, .sectionContacto, .footer  {
 
@@ -65,22 +83,13 @@ a:hover
     flex-direction: column;
     align-items: center; 
     
-
-
 }
 
-.sectionHorarios, .sectionContacto {
-     
+.sectionHorarios {
+
     background-color:#cadcda81;
     padding: 10px;
 
-}
-
-.sectionContacto { 
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .sectionContacto__form , .sectionContacto__container1 { 
@@ -94,46 +103,23 @@ a:hover
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #cadcda81;
     padding: 10px;
-
-    
+    font-size: 50px;
+    background-color: #cadcda81;
 }
+.sectionContacto { background-color: #cadcdaed;}
 
+
+.sectionInstalaciones, .sectionInstructores, .sectionHorarios, .sectionContacto{ padding-top: 300px; }
 }
 
     /* vista desktop */
 @media (min-width: 768px){
 
 
-.navbar{ display: none;}    
+.navbar-expand-lg .navbar-collapse { justify-content: flex-end; }   
 
-    .header { 
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #cadcda81;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    
-    }
-
-    .header__nav { 
-        width: 80%;
-    }
-
-    .nav__ul { 
-
-        display: flex;
-        justify-content: space-evenly;
-        align-content: center;
-        width: 100%;
-    }
-    
 .portada__img { opacity: 0.8;}
-
 
 
 .sectionInstalaciones , .sectionHorarios, .sectionInstructores , .sectionContacto, h2 { 
@@ -142,28 +128,26 @@ a:hover
 .sectionInstalaciones , .sectionHorarios, .sectionInstructores , .sectionContacto{ padding-top: 300px; }
 
     
-   .articleInstalaciones ,.articleInstructores  {
+.articleInstalaciones ,.articleInstructores  {
     
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center; 
-        justify-content: space-around;
-        background-color:#cadcda81;
-        padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: space-around;
+    background-color:#cadcda81;
+    padding: 30px;
     
     
     }
 
-    .articleInstalaciones__img , .articleInstalaciones__img--disable  {  border-radius: 20px; padding-top: 20px; }
+.articleInstalaciones__img , .articleInstalaciones__img--disable  {  border-radius: 20px; padding-top: 20px; }
     
-    .sectionContacto--desktop, .sectionContacto__container3--desktop { 
-
+.sectionContacto--desktop, .sectionContacto__container3--desktop { 
     background-color: #cadcda81;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
-
 }
 
 .sectionContacto__container2 {  
@@ -172,18 +156,18 @@ a:hover
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 10%;
+    width: 20%;
     padding: 30px;
 }
-    
-   
-.sectionContacto__container1,   .sectionContacto__container3  { 
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 30px;
+.sectionContacto__container1, .sectionContacto__container3  { 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+    font-size: 50px;
 }
 
 .sectionContacto__container3--desktop  { 
@@ -198,19 +182,39 @@ a:hover
 }
 
  .sectionContacto  { 
-
-
-  background-color: #cadcda81;
+    background-color: #cadcda81;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
-
 } 
 
-.footer { text-align: center;}    
+.footer { 
+    text-align: center;
+}    
+
+.formContacto 
+ 
+{
+    margin: 0 auto; /* Centramos el formulario */
+    width: 300px;   /* Sin ancho no podemos centrar el formulario */
+     /* separamos los bordes del form del resto de elementos */
+    border-radius: 10px; /* Redondeamos los bordes del form */
+ }
 
 
+
+ .formContacto__button{
+    margin-top: 10px; /* Damos un margen individual para el contenedor del botón */
+    width: 60%;
+    margin-left: 15%;
+    border-radius: 10px;
+}
+
+.formContact__input { 
+
+    padding-bottom: 30px;
+}
 
 
 }
